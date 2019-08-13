@@ -44,6 +44,17 @@ app.get('/api/v1/teams/:id', (resquest, response) => {
   }
 })
 
+app.get('/api/v1/arrests/:id', (resquest, response) => {
+  const {id} = resquest.params;
+  const player = app.locals.arrests.find(arrest => arrest.id === id);
+
+  if(player){
+    return response.status(200).json({player})
+  } else {
+    return response.sendStatus(404)
+  }
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}`)
 })
