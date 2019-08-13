@@ -16,6 +16,12 @@ app.locals.parks = [
 app.get('/', (request, response) => {
 });
 
+app.get('/api/v1/parks', (request, response) => {
+  const parks = app.locals.parks
+
+  return response.status(200).json({parks})
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}`)
 })
