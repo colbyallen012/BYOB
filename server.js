@@ -6,27 +6,20 @@ app.set('port', process.env.PORT || 3000)
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors());
-app.locals.title = 'BYOB Parks';
-app.locals.parks = [
-  { id: '1', name: 'Weir Gulch South', park_type: 'park', park_class: 'linear' },
-  { id: '2', name: 'Aztlan', park_type: 'park', park_class: 'neighborhood'  },
-  { id: '3', name: 'Lowry Open Space', park_type: 'open space', park_class: 'special use'  }
+app.locals.title = 'BYOB NFL Arrests';
+app.locals.teams = [
+  { id: '1', team_preffered_name: 'Denver Broncos', team_conference: 'AFC', arrest_count: '51'},
+  { id: '2', team_preffered_name: 'Minnesota Vikings', team_conference: 'NFC', arrest_count: '50'},
+  { id: '3', team_preffered_name: 'Cincinnati Bengals', team_conference: 'AFC', arrest_count: '44'}
 ];
 
 app.get('/', (request, response) => {
 });
 
-app.get('/api/v1/parks', (request, response) => {
-  const parks = app.locals.parks
+app.get('/api/v1/teams', (request, response) => {
+  const teams = app.locals.teams
 
-  return response.status(200).json({parks})
-})
-
-app.get('/api/v1/parks/park_class/neighborhood', (request, response) => {
-  const parkClass = 'neighborhood'
-  const parks = app.locals.parks.filter(park => park.park_class === parkClass)
-
-  return response.status(200).json({parks})
+  return response.status(200).json({teams})
 })
 
 app.listen(app.get('port'), () => {
