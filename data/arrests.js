@@ -1,6 +1,7 @@
 [
   {
   team_name: "Denver Broncos",
+  team_id: 1,
   player: "Chad Kelly",
   position: "QB",
   category: "Trespassing",
@@ -8,6 +9,7 @@
   },
   {
   team_name: "Denver Broncos",
+  team_id: 1,
   player: "Adam Gotsis",
   position: "DE",
   category: "Sexual Assault",
@@ -15,6 +17,7 @@
   },
   {
   team_name: "Denver Broncos",
+  team_id: 1,
   player: "Carlos Henderson",
   position: "WR",
   category: "Drugs",
@@ -22,6 +25,7 @@
   },
   {
   team_name: "Minnesota Vikings",
+  team_id: 2,
   player: "Cayleb Jones",
   position: "WR",
   category: "Domestic Assault",
@@ -29,6 +33,7 @@
   },
   {
   team_name: "Minnesota Vikings",
+  team_id: 2,
   player: "Isame Faciane",
   position: "OG",
   category: "DUI",
@@ -36,6 +41,7 @@
   },
   {
   team_name: "Minnesota Vikings",
+  team_id: 2,
   player: "Jabari Price",
   position: "CB",
   category: "DUI",
@@ -43,6 +49,7 @@
   },
   {
   team_name: "Cincinnati Bengals",
+  team_id: 3,
   player: "Adam Jones",
   position: "CB",
   category: "Assault",
@@ -50,6 +57,7 @@
   },
   {
   team_name: "Cincinnati Bengals",
+  team_id: 3,
   player: "Orson Charles",
   position: "FB",
   category: "Gun",
@@ -57,6 +65,7 @@
   },
   {
   team_name: "Cincinnati Bengals",
+  team_id: 3,
   player: "Adam Jones",
   position: "CB",
   category: "Disorderly conduct",
@@ -64,6 +73,7 @@
   },
   {
   team_name: "Jacksonville Jaguars",
+  team_id: 4,
   player: "Leonard Fournette",
   position: "RB",
   category: "Suspended License",
@@ -71,6 +81,7 @@
   },
   {
   team_name: "Jacksonville Jaguars",
+  team_id: 4,
   player: "Barry Church",
   position: "S",
   category: "Disorderly Conduct",
@@ -78,6 +89,7 @@
   },
   {
   team_name: "Jacksonville Jaguars",
+  team_id: 4,
   player: "Ronnie Harrison",
   position: "S",
   category: "Disorderly Conduct",
@@ -85,6 +97,7 @@
   },
   {
   team_name: "Tampa Bay Buccaneers",
+  team_id: 5,
   player: "TJ Ward",
   position: "S",
   category: "Outstanding Warrant",
@@ -92,6 +105,7 @@
   },
   {
   team_name: "Tampa Bay Buccaneers",
+  team_id: 5,
   player: "Austin Seferian-Jenkins",
   position: "TE",
   category: "DUI",
@@ -99,6 +113,7 @@
   },
   {
   team_name: "Tampa Bay Buccaneers",
+  team_id: 5,
   player: "Akeem Spence",
   position: "DT",
   category: "Drugs",
@@ -107,6 +122,7 @@
 
 {
   team_name: "Tennessee Titans",
+  team_id: 6,
   player: "Dorial Green-Beckham",
   position: "WR",
   category: "Outstanding warrant",
@@ -114,6 +130,7 @@
   },
   {
   team_name: "Tennessee Titans",
+  team_id: 6,
   player: "Justin Hunter",
   position: "WR",
   category: "Assault",
@@ -121,6 +138,7 @@
   },
   {
   team_name: "Cleveland Browns",
+  team_id: 7,
   player: "Antonio Callaway",
   position: "WR",
   category: "Drugs",
@@ -128,6 +146,7 @@
   },
   {
   team_name: "Cleveland Browns",
+  team_id: 7,
   player: "T.Y. McGill",
   position: "DT",
   category: "Drugs",
@@ -135,6 +154,7 @@
   },
   {
   team_name: "Indianapolis Colts",
+  team_id: 8,
   player: "David Parry",
   position: "DT",
   category: "DUI, resisting arrest",
@@ -142,6 +162,7 @@
   },
   {
   team_name: "Indianapolis Colts",
+  team_id: 8,
   player: "Robert Turbin",
   position: "RB",
   category: "Drugs",
@@ -149,6 +170,7 @@
   },
   {
   team_name: "Kansas City Chiefs",
+  team_id: 9,
   player: "Kevin Pierre-Louis ",
   position: "LB",
   category: "Drugs",
@@ -156,6 +178,7 @@
   },
   {
   team_name: "Kansas City Chiefs",
+  team_id: 9,
   player: "Roy Miller",
   position: "DT",
   category: "Domestic Battery",
@@ -163,6 +186,7 @@
   },
   {
   team_name: "Kansas City Chiefs",
+  team_id: 9,
   player: "Demetrius Harris",
   position: "TE",
   category: "Drugs",
@@ -170,6 +194,7 @@
   },
   {
   team_name: "Chicago Bears",
+  team_id: 10,
   player: "Deiondre' Hall",
   position: "CB",
   category: "Disorderly conduct",
@@ -177,6 +202,7 @@
   },
   {
   team_name: "Chicago Bears",
+  team_id: 10,
   player: "Ray McDonald",
   position: "DT",
   category: "Domestic violence",
@@ -184,6 +210,7 @@
   },
   {
   team_name: "Chicago Bears",
+  team_id: 10,
   player: "Tim Jennings",
   position: "CB",
   category: "DUI",
@@ -191,6 +218,7 @@
   },
   {
   team_name: "Miami Dolphins",
+  team_id: 11,
   player: "Rey Maualuga",
   position: "LB",
   category: "Battery",
@@ -198,6 +226,7 @@
   },
   {
   team_name: "Miami Dolphins",
+  team_id: 11,
   player: "Leon Orr",
   position: "DT",
   category: "Drugs",
@@ -205,6 +234,7 @@
   },
   {
   team_name: "Miami Dolphins",
+  team_id: 11,
   player: "Derrick Shelby",
   position: "DE",
   category: "Trespassing",
