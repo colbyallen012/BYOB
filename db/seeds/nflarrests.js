@@ -1,42 +1,47 @@
-let teamsData = [
-  {
-    team_name: "Denver Broncos",
-    team_conference: "AFC",
-    arrest_count: "51"
-    },
-    {
-    team_name: "Minnesota Vikings",
-    team_conference: "NFC",
-    arrest_count: "50"
-    },
-    {
-    team_name: "Cincinnati Bengals",
-    team_conference: "AFC",
-    arrest_count: "44"
-    }
-]
+var teams = require('../../data/teamData.js') 
+var arrests = require('../../data/arrestData.js')
 
+const createTeam = (knex,team) => {
+  return knex('team').insert({
+    team_name: team.team_name,
+    team_conference: team.team_conference,
+    arrest_count: team.arrest_count
+  }, 'id')
+  .then(team => {
+    let arrestPromises = [];
 
+    arrests.arrests.forEach(arrest => {
+      arrestPromises.push(
+        createArrest(knex, {
+          team_name: arrest.team_name, 
+          player: arrest.player, 
+          position: arrest.position, 
+          category: arrest.category, 
+          description: arrest.description, 
+          team_id: team[0]
+        })
+      )
+    });
 
-exports.seed = function(knex) {
-  return knex('arrest').del()
-    .then(() => knex('team').del())
-
-  .then(() => {
-    return Promise.all([
-      knex('team').insert({
-        team_name: 'Denver Broncos', team_conference: 'AFC', arrest_count: '100'
-      }, 'id')
-
-      .then(team => {
-        return knex('arrest').insert([
-          {team_name: 'Denver Broncos', player: 'Chad Kelly', position: 'QB', category: 'Trespassing', description: 'breaking in', team_id: team[0]},
-        ])
-      })
-
-      .then(() => console.log('database successfully seeded!'))
-      .catch(error => console.log(`There is an error with seeding ${error}`))
-    ])
+    return Promise.all(arrestPromises)
   })
-  .catch(error => console.log(`There is an error with seeding ${error}`))
+};
+
+const createArrest = (knex, arrest) => {
+  return knex('arrest').insert(arrest)
+};
+
+exports.seed = (knex) => {
+  return knex('arrest').del() 
+    .then(() => knex('team').del()) 
+    .then(() => {
+      let teamPromises = [];
+
+      teams.teams.forEach(team => {
+        teamPromises.push(createTeam(knex, team));
+      });
+
+      return Promise.all(teamPromises);
+    })
+    .catch(error => console.log(`Error seeding data: ${error}`));
 };
