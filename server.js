@@ -23,7 +23,6 @@ app.get('/', (request, response) => {
 
 app.get('/api/v1/teams', (request, response) => {
   const getTeams = app.locals.teams
-
   return response.status(200).json({getTeams})
 })
 
