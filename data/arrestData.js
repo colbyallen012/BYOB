@@ -1,4 +1,5 @@
-[
+module.exports = {
+  arrests: [
   {
   team_name: "Denver Broncos",
   team_id: 1,
@@ -241,3 +242,4 @@
   description: "Police report in Fort Lauderdale says he was touching females at club without permission and refused to leave when asked."
   }
 ]
+}

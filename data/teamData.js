@@ -1,4 +1,5 @@
-[
+module.exports = {
+  teams: [
   {
   team_name: "Denver Broncos",
   team_conference: "AFC",
@@ -160,3 +161,7 @@
   arrest_count: "16"
   }
   ]
+}
+
+
+ 
