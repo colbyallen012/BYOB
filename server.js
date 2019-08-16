@@ -12,6 +12,7 @@ app.use(cors());
 app.locals.title = 'BYOB NFL Arrests';
 
 app.get('/', (request, response) => {
+  response.json('Initial')
 });
 
 app.get('/api/v1/teams', (request, response) => {
