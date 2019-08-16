@@ -16,7 +16,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/api/v1/teams', (request, response) => {
-  database('team').select()
+  database('team').select('*')
     .then((team) => {
       response.status(200).json(team);
     })
