@@ -85,6 +85,24 @@ app.post('/api/v1/teams', (request, response) => {
     })
 })
 
+app.post('/api/v1/arrests', (request, response) => {
+  const arrest = request.body;
+  for (let requiredParameter of ['team_name', 'team_id', 'player', 'position', 'category', 'description']){
+    if(!arrest[requiredParameter]) {
+      return response
+        .status(422)
+        .send({error: `Expected format: {team_name: <String>, team_id: <Integer> , player: <String>, position: <String>, category: <String>, description: <String>}. You're missing a '${requiredParameter}' property.`})
+    }
+  }
+  database('arrest').insert(arrest, 'id')
+    .then(arrest => {
+      response.status(201).json({id: arrest[0]})
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    })
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}`)
 })
