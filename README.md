@@ -10,6 +10,7 @@ Deployed with Heroku
 
 ## Endpoints
 
+- Main `https://nflarrests1.herokuapp.com`
 - Teams `https://nflarrests1.herokuapp.com/api/v1/teams`
 - Arrests `https://nflarrests1.herokuapp.com/api/v1/arrests`
 - Specific Team`https://nflarrests1.herokuapp.com/api/v1/teams/:team_id`
