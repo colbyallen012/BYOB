@@ -6,7 +6,9 @@ This was a one week project at Turing School of Software & Design, where we buil
 ## Built With
 
 Express.js
+
 Knex
+
 Deployed with Heroku
 
 ## Endpoints
