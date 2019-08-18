@@ -15,4 +15,4 @@ Deployed with Heroku
 - Specific Team`https://nflarrests1.herokuapp.com/api/v1/teams/:team_id`
 - Specific Arrest `https://nflarrests1.herokuapp.com/api/v1/arrests/:arrest_id`
 
-| URL | Verb | Options | Sample Response | 
+|URL---|Verb---|Options---|Sample Response---| 
