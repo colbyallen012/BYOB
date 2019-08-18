@@ -17,3 +17,9 @@ Deployed with Heroku
 
 URL|Verb|Options|Sample Response
 ---|---|---|---
+`https://nflarrests1.herokuapp.com/api/v1/teams`| GET | Not needed | Array of all existing teams `[{id: 65,
+team_name: "Denver Broncos",
+team_conference: "AFC",
+arrest_count: "51",
+created_at: "2019-08-16T17:19:13.387Z",
+updated_at: "2019-08-16T17:19:13.387Z"}]`
