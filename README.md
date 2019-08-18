@@ -17,7 +17,8 @@ Deployed with Heroku
 
 URL|Verb|Options|Sample Response
 ---|---|---|---
-`https://nflarrests1.herokuapp.com/api/v1/teams`| GET | Not needed | Array of all existing teams `[{id: 65, team_name: "Denver Broncos", team_conference: "AFC", arrest_count: "51", created_at: "2019-08-16T17:19:13.387Z", updated_at: "2019-08-16T17:19:13.387Z"}]`
-`https://nflarrests1.herokuapp.com/api/v1/arrests` | GET | Not needed | Array of all arrests `[{id: 1921, team_name: "Denver Broncos", team_id: 65, player: "Chad Kelly", position: "QB", category: "Trespassing", description: "The Englewood Colorado Police arrested and charged Kelly with first-degree criminal trespassing after a report of a man allegedly inside a home.", created_at: "2019-08-16T17:19:13.560Z", updated_at: "2019-08-16T17:19:13.560Z"}]`
+`https://nflarrests1.herokuapp.com/api/v1/teams`| GET | Not needed | Array of all existing teams `[{id: 65, team_name: "Denver Broncos", team_conference: "AFC", arrest_count: "51"}]`
+`https://nflarrests1.herokuapp.com/api/v1/arrests` | GET | Not needed | Array of all arrests `[{id: 1921, team_name: "Denver Broncos", team_id: 65, player: "Chad Kelly", position: "QB", category: "Trespassing", description: "The Englewood Colorado Police arrested and charged Kelly with first-degree criminal trespassing after a report of a man allegedly inside a home."}]`
 `https://nflarrests1.herokuapp.com/api/v1/teams/` | POST | `{team_name: <String>, team_conference: <String> , arrest_count: <String>}` | New Team `{team_name: 'Puppies', team_conference: 'NFC', arrest_count: '100'}`
 `https://nflarrests1.herokuapp.com/api/v1/arrests/` | POST | `{team_name: <String>, team_id: <Integer> , player: <String>, position: <String>, category: <String>, description: <String>}` | New Arrest `{team_name: 'Puppies', team_id: 7, player: 'Rufus Dog', position: 'Retriever', category: 'theft', description: 'stealing all the kibble'}`
+`https://nflarrests1.herokuapp.com/api/v1/arrests/` | DELETE | `{id: <Integer>}` | Array of existing teams after delete `[{id: 65, team_name: "Denver Broncos", team_conference: "AFC", arrest_count: "51"}]`
