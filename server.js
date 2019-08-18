@@ -103,6 +103,22 @@ app.post('/api/v1/arrests', (request, response) => {
     })
 })
 
+app.delete('/api/v1/arrests/:id', (request, response) => {
+  database('arrest').where('id', request.params.id).delete()
+    .then(arrest => {
+      if (arrest.id) {
+        response.status(200).json(arrest);
+      } else {
+        response.status(404).json({ 
+          error: `Could not find arrest with id ${request.params.id}`
+        });
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}`)
 })
